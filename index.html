@@ -76,6 +76,8 @@
     .nav-links { display: flex; gap: 28px; list-style: none; }
     .nav-links a { font-size: 0.88rem; font-weight: 700; letter-spacing: 0.04em; color: var(--ink); transition: color 0.15s; }
     .nav-links a:hover, .nav-links a.active { color: var(--kelp); }
+    .nav-cta { flex-shrink: 0; }
+    @media (max-width: 600px) { .nav-cta { display: none; } }
     .nav-burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
     .nav-burger span { display: block; width: 24px; height: 2px; background: var(--ink); border-radius: 2px; }
 
@@ -297,7 +299,7 @@
         <li><a href="#" onclick="showPage('events')" data-page="events">Markets</a></li>
         <li><a href="#" onclick="navContact()" data-page="contact">Contact</a></li>
       </ul>
-      <a href="#" class="btn btn-primary" onclick="showPage('shop')">View the collection</a>
+      <a href="#" class="btn btn-primary nav-cta" onclick="showPage('shop')">View the collection</a>
       <button class="nav-burger" aria-label="Open menu" onclick="document.getElementById('nav-links').classList.toggle('open')">
         <span></span><span></span><span></span>
       </button>
